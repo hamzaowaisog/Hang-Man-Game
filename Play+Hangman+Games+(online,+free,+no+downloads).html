@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<title>Play Hangman Games (online, free, no downloads)</title>
+		<meta name="description" content="Play a game of hangman right now for free. No download needed. Works great on your phone. Choose a word list, difficulty, or just a fun word theme." />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="google" content="notranslate" />
+		<style>
+		.layout-main,.main_width{width:100%}@media only screen and (min-width:500px){.layout-main,.main_width{width:calc(100% - 120px - 1rem)}}@media only screen and (min-width:700px){.layout-main,.main_width{width:calc(100% - 160px - 1rem)}}@media only screen and (min-width:900px){.layout-main,.main_width{max-width:calc(100% - 300px - 1rem)}}@media (min-width:400px){html{font-size:1.1em}}@media (min-width:768px){html{font-size:1.2em}}body{margin:0;background:-webkit-gradient(linear,left top,left bottom,from(white),to(#f0f8ff));background:-webkit-linear-gradient(top,#fff 0,#f0f8ff 100%);background:-o-linear-gradient(top,#fff 0,#f0f8ff 100%);background:linear-gradient(180deg,#fff 0,#f0f8ff 100%);color:#333;line-height:1.4em;font-family:Arial,san-serif}input,textarea{font-size:1rem}h1{font-size:1.4rem;line-height:1.2em;margin:3rem 0 1rem}h2{font-size:1.2rem;line-height:1.3em;margin:3rem 0 1rem}h3{font-size:1.1rem;line-height:1.4em;margin:3rem 0 1rem}a{color:#06c}:first-child{margin-top:0}:last-child{margin-bottom:0}ul>li{margin-bottom:1rem}.gamenav,.gutter,.main,header{padding-left:1rem;padding-right:1rem}@media (min-width:400px){.gamenav,.gutter,.main,header{padding-left:1.5em;padding-right:1.5em}}.ungutter{margin-left:-.1rem;margin-right:-.1rem}@media (min-width:400px){.ungutter{margin-left:-1.5em;margin-right:-1.5em}}.btn,.button,input[type=submit]{display:inline-block;background:#06c;text-shadow:-1px 1px #417cb8;-webkit-box-shadow:2px 2px 1px #036;box-shadow:2px 2px 1px #036;padding:.25em .5em;font-size:.9rem;color:#fff;text-decoration:none;cursor:pointer;border:none;border-radius:2px}.btn:hover,.button:hover,input[type=submit]:hover{background:#0080ff}.btn:after,.button:after,input[type=submit]:after{content:'\25ba';font-size:.75em;padding-left:.5em}.layout-all{margin:0 auto;min-width:320px}.layout-all:after{content:"";display:table;clear:both}@media (min-width:744px){.layout-all{width:728px}}@media (min-width:864px){.layout-all{width:864px}}@media (min-width:904px){.layout-all{width:904px}}@media (min-width:1044px){.layout-all{width:1044px}}.layout-content{background:#fff;-webkit-box-shadow:0 0 10px #002851;box-shadow:0 0 10px #002851}@media (min-width:744px){.layout-content{float:left;width:728px}}@media (min-width:864px){.layout-sidebar{float:left;margin-left:16px;width:120px}}@media (min-width:904px){.layout-sidebar{width:160px}}@media (min-width:1044px){.layout-sidebar{width:300px}}header{margin:0;width:100%;font-size:.8rem;-webkit-box-sizing:border-box;box-sizing:border-box;background:#002851;overflow:auto;padding-top:.25rem;padding-bottom:.25rem}@media (min-width:768px){header{padding-top:.5rem;padding-bottom:.5rem}}.h-nav,header{line-height:2rem}.h-nav li,.h-nav ul{margin:0;padding:0;list-style:none}.h-nav ul{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.h-nav li{padding-left:.75rem}.h-nav li:first-child{-webkit-box-flex:1;-ms-flex:1;flex:1;padding:0}.h-nav a{color:#fff;white-space:nowrap}.logo{font-weight:700;text-decoration:none}@media (min-width:320px){.logo{font-size:1rem}}.logo svg.noose{vertical-align:middle;width:1em;height:1.4em}@media (min-width:768px){.logo svg.noose{width:1.4em;height:2em}}.logo svg.noose g.win{display:none}.logo svg.noose g:not(.win) *{stroke:#fff;fill:none;stroke-width:10px}.gamenav-expander{position:relative}.gamenav{display:none;position:absolute;top:0;left:-.5rem;background:rgba(0,40,81,.9);width:calc(100% + .5rem);z-index:10;color:#fff;-webkit-box-sizing:border-box;box-sizing:border-box;padding-top:1rem;padding-bottom:2rem}.gamenav a{color:#fff}.gamenav li,.gamenav ul{margin:0;padding:0;list-style:none;line-height:1.2em}.gamenav a:not([href]){opacity:.1}.gamenav a.pop:after{margin-left:.1em;content:'\2605';color:#ff0;text-decoration:none;position:absolute}.gamenav p{margin:1.5rem 0 .5rem;font-size:1.1em;line-height:1.4em;font-weight:700;color:#ddd}.gamenav p:first-child{margin-top:0}body.menu-doin .gamenav{display:block}.gamenav ul{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}.gamenav ul li{width:50%}@media (min-width:600px){.gamenav ul li{width:33.333%}}.main{margin-top:1.5rem;margin-bottom:2rem;-webkit-box-sizing:border-box;box-sizing:border-box;border:solid 0 #f9f9f9}.main-top{margin:.5rem 0 1.5rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}footer{padding:.5rem 1rem 0;font-size:10px;line-height:1.2em;background:#002851;margin-top:1rem;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff}footer nav{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-wrap:wrap;flex-wrap:wrap}footer nav>*{margin-bottom:.5rem}footer a{color:#fff}.stinkblock{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:0 0 1rem}.stinkblock-half{margin-top:3rem;-webkit-box-sizing:border-box;box-sizing:border-box;width:100%}@media (min-width:500px){.stinkblock-half{width:50%}.stinkblock-half:first-child{padding-right:1.5rem}.stinkblock-half:last-child{padding-left:1.5rem}}ul.list-cols{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding-left:1.5em;margin:0 -2em 1em 0}ul.list-cols li{margin:0;width:50%;-webkit-box-sizing:border-box;box-sizing:border-box;padding:0 2em 0 0}@media (min-width:500px){ul.list-cols li{width:33%}}@media (min-width:700px){ul.list-cols li{width:25%}}.copy{margin:2rem 0}[data-go_menu]{cursor:pointer}.teaser-blocks{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:0 -.5rem}.teaser-blocks>section{width:100%;margin:1rem 0;padding:0 .5rem;-webkit-box-sizing:border-box;box-sizing:border-box}@media (min-width:768px){.teaser-blocks>section{width:50%}}.teaser-blocks h1,.teaser-blocks h2{font-size:1.1em;line-height:1.1em;text-transform:uppercase;padding-bottom:.5rem;margin-bottom:.5rem;border-bottom:solid 1px #000}.contrib-row{display:-webkit-box;display:-ms-flexbox;display:flex;margin:1rem auto}.contrib-row>input[type=text]{-webkit-box-flex:1;-ms-flex:1;flex:1;width:100%}.creator-form textarea{width:100%;min-height:200px;-webkit-box-sizing:border-box;box-sizing:border-box}.creator-form label{display:block;margin:0 0 .25em;font-weight:700}.creator-form p{margin:.25em 0 .5em;font-size:.8rem;opacity:.8}.expandable--collapsed .expandable-subject{max-height:20vh;overflow:hidden;position:relative}.expandable--collapsed .expandable-subject:before{content:'';position:absolute;bottom:0;left:0;width:100%;height:5em;max-height:50%;background:-webkit-gradient(linear,left bottom,left top,from(#fff),to(rgba(255,255,255,0)));background:-webkit-linear-gradient(bottom,#fff 0,rgba(255,255,255,0) 100%);background:-o-linear-gradient(bottom,#fff 0,rgba(255,255,255,0) 100%);background:linear-gradient(0deg,#fff 0,rgba(255,255,255,0) 100%)}.expandable-toggler{text-align:center}.expandable-toggler:after,.expandable-toggler:before{content:'\25b2';font-size:.6em;line-height:1em;padding:0 .5em;vertical-align:middle}.expandable--collapsed .expandable-toggler:after,.expandable--collapsed .expandable-toggler:before{content:'\25bc'}.section_wide,.section_widest{max-width:1400px;margin-left:auto;margin-right:auto;-webkit-box-sizing:border-box;box-sizing:border-box}.section_wide.section_gutter,.section_widest.section_gutter{-webkit-box-sizing:content-box;box-sizing:content-box}.section_wide{max-width:1200px}.section_gutter{padding-left:1rem;padding-right:1rem;-webkit-box-sizing:border-box;box-sizing:border-box}.layout{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.layout-main{background:#fff;-webkit-box-shadow:0 0 1rem rgba(0,0,0,.2);box-shadow:0 0 1rem rgba(0,0,0,.2);-ms-flex-item-align:start;align-self:flex-start}.layout-top{margin:.5rem 0 1.5rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.adsbygoogle--top{width:320px;min-height:50px;max-height:100px}@media only screen and (min-width:630px){.adsbygoogle--top{width:468px;height:60px;min-height:0;max-height:none}}@media only screen and (min-width:1065px){.adsbygoogle--top{width:728px;height:90px}}.adsbygoogle--side1,.adsbygoogle--side2,.layout-side{display:none}@media only screen and (min-width:500px){.layout-side{display:-webkit-box;display:-ms-flexbox;display:flex;display:block;margin:-2rem 0 0;width:120px}.adsbygoogle--side1,.adsbygoogle--side2{display:block;width:120px;height:600px}}@media only screen and (min-width:700px){.layout-side{width:160px}.adsbygoogle--side1,.adsbygoogle--side2{width:160px;height:600px}}@media only screen and (min-width:900px){.layout-side{width:300px}.adsbygoogle--side1{width:300px;height:250px}.adsbygoogle--side2{width:300px;height:600px}}.adsbygoogle{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAATklEQVQoU2O0O3X+PwMDA8MhM0NGEI0LMBKtEJsJD27YgW1R0DgEtwWrdUQrxGYLY8V5iDUdhghrKFOITfenmXFgW/jSF+H3DNEKsdkCAO99IAvXcD3VAAAAAElFTkSuQmCC);background-repeat:repeat}
+/*# sourceMappingURL=all.min.css.map */
+		</style>
+				<style>
+.GameHeader{display:inline-block;font-size:1rem}.GameHeader-label{display:inline;font-size:1rem;margin:0;line-height:1em;font-weight:400}.GameHeader-cat{margin:0;padding-right:.75em;display:inline-block;font-size:1.5rem;position:relative}.GameHeader-cat:after{content:'';position:absolute;right:0;bottom:.1em;display:block;height:0;width:0;border:solid .25em transparent;border-top-color:currentColor}body.menu-doin .GameHeader{position:relative;color:#fff;z-index:9}body.menu-doin .GameHeader:before{content:'';position:absolute;top:-.5rem;left:-.5rem;width:calc(100% + 1rem);height:calc(100% + .5rem);background:rgba(0,40,81,.9);z-index:-1}.noosecanvas{position:relative;margin:1rem 0;text-align:center}.new-word{display:none;cursor:pointer;position:absolute;right:0;top:50%;background:#06c;padding:.25em .5em;color:#fff}.new-word:after{content:' >';font-weight:700;font-size:.8em;line-height:1.25em}.word-hint{display:none;cursor:pointer;position:absolute;left:0;top:50%;background:#06c;padding:.25em .5em;color:#fff}svg.noose{max-height:25vh}@media (min-width:768px){svg.noose{max-height:30vh}}svg.noose .inactive.lose,svg.noose .inactive.win{display:none}svg.noose .inactive{stroke:#f2f2f2}svg.noose .active{stroke:#333}svg.noose *{fill:none;stroke:#000;stroke-width:5;stroke-miterlimit:10}#alpha_btns{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;list-style:none;text-align:center;margin:0 auto 1rem;padding:0;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;font-size:1.25rem;line-height:1em}@media (min-width:400px){#alpha_btns{max-width:350px}}@media (min-width:768px){#alpha_btns{font-size:1.5rem;line-height:1em;max-width:440px}}#alpha_btns li{margin:0;padding:0;width:1em;padding:.2em;margin:.1em;text-align:center;background:#06c;color:#fff;border-radius:.25em;cursor:pointer;-webkit-box-shadow:rgba(0,0,0,.5) 1px 1px;box-shadow:rgba(0,0,0,.5) 1px 1px}#alpha_btns li.bad,#alpha_btns li.good{border-color:transparent;cursor:default;background:0 0!important;-webkit-box-shadow:none;box-shadow:none}#alpha_btns li.good{color:#999}#alpha_btns li.bad{color:#c66}#alpha_btns li:hover{background:#0080ff}#word{margin:.5rem 0 1rem;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;font-size:1.5rem;line-height:1.5em;max-width:100%;overflow-x:auto}@media (min-width:1200px){#word{font-size:2rem;line-height:1.5em}}#word>span{margin:0 .75em;white-space:nowrap}#word>span>span{display:inline-block;border-bottom:solid 3px transparent;width:1em;vertical-align:top;margin-left:4px;text-align:center;overflow:hidden;color:#000}#word>span>span:first-child{margin-left:0}#word>span>span.hide{text-indent:-100vw;border-color:#000}#word>span>span.new{color:#090}#word>span>span.bad{color:#c00}#word.gameover span{color:#900}
+/*# sourceMappingURL=hangman.min.css.map */
+</style>
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({
+			google_ad_client: "ca-pub-5711305288167877",
+			enable_page_level_ads: true
+			});
+		</script>
+
+		<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script defer src="/js/hangman.min.js?v=1561499197"></script>
+		<script defer src="/js/create.min.js?v=1561499197"></script>
+	</head>
+	<body>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-79200579-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+		
+		<header>
+			<div class="section_wide">
+				<nav class="h-nav main_width">
+					<ul>
+						<li>
+							<a href="/" class="logo">
+								<svg version="1.1" class="noose" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 236 333" style="enable-background:new 0 0 236 333;" xml:space="preserve">
+	<g>
+		<line class="inactive step" x1="139.4" y1="133.9" x2="121.6" y2="212.4"/>
+		<line class="inactive step" x1="139.4" y1="134.3" x2="154.2" y2="210.8"/>
+		<line class="inactive step" x1="139.4" y1="218.7" x2="114.2" y2="299.3"/>
+		<line class="inactive step" x1="139.4" y1="218.7" x2="167.5" y2="291.4"/>
+		<line class="inactive step" x1="139.4" y1="124.7" x2="139.4" y2="218.7"/>
+		<circle class="inactive step" cx="139.4" cy="89.1" r="35.6"/>
+		<g class="inactive lose">
+			<g>
+				<line x1="122.9" y1="83.4" x2="131.1" y2="91.6"/>
+				<line x1="122.6" y1="91.9" x2="131.6" y2="82.9"/>
+			</g>
+			<g>
+				<line x1="147" y1="83.5" x2="155.3" y2="91.8"/>
+				<line x1="146.8" y1="92" x2="155.8" y2="83"/>
+			</g>
+			<g>
+				<path d="M126.4,106.5c0-1.8,5.6-3.2,12.4-3.2"/>
+				<path d="M150.9,106.5c0-1.8-5.6-3.2-12.4-3.2"/>
+			</g>
+		</g>
+	</g>
+	<g class="inactive win">
+		<circle cx="167" cy="119.9" r="35.6"/>
+		<line x1="167" y1="169" x2="231.8" y2="96.7"/>
+		<line x1="167" y1="155.5" x2="167" y2="249.4"/>
+		<line x1="167" y1="249.4" x2="180.4" y2="330.5"/>
+		<line x1="167" y1="249.4" x2="142.4" y2="330.5"/>
+		<line x1="167" y1="169" x2="92.8" y2="106.4"/>
+		<g>
+			<path d="M151.8,133.7c0,4.2,6.9,7.7,15.4,7.7"/>
+			<path d="M182.2,133.7c0,4.2-6.9,7.7-15.4,7.7"/>
+		</g>
+		<line x1="151" y1="118.1" x2="161.1" y2="118.1"/>
+		<line x1="173.1" y1="118.1" x2="183.2" y2="118.1"/>
+	</g>
+	<g>
+		<line x1="0" y1="330.5" x2="236" y2="330.5"/>
+		<line x1="59" y1="0" x2="59" y2="330.5"/>
+		<line x1="139.4" y1="53.5" x2="139.4" y2="0"/>
+		<line x1="58" y1="2.5" x2="139.4" y2="2.5"/>
+	</g>
+</svg>								Hangman
+							</a>
+						</li>
+						<li><a href="/play">Play</a></li>
+						<li><a href="/how-to">How-to</a></li>
+						<li><a href="/words">Words</a></li>
+						<li><a href="/create">Create</a></li>
+											</ul>
+				</nav>
+			</div>
+		</header>
+
+		<div class="layout section_wide">
+			<div class="layout-main">
+				<div class="layout-top">
+					<ins class="adsbygoogle adsbygoogle--top" 
+						style="display:inline-block"
+						data-ad-client="ca-pub-5711305288167877"
+						data-ad-slot="8416336468"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+				<div class="layout-part3 section_gutter">
+					
+<div class="GameHeader">
+		<h1 class="GameHeader-label">Play Hangman</h1>: 
+	<h2 class="GameHeader-cat" data-go_menu>All Words</h2>
+	</div>
+
+<div class="gamenav-expander">
+	<nav class="gamenav">
+<p>Choose a category below or <a href="/create">create your own game</a>.</p>
+<p>Basics:</p>
+<ul>
+	<li><a href="/play" class="pop">All Words</a></li>
+	<li><a href="/play/hard-words">Hard Words</a></li>
+</ul>
+<p>Fun &amp; Popular Culture:</p>
+<ul>
+		<li><a href="/play/music" class="pop">Music</a></li>
+	<li><a href="/play/sports" class="pop">Sports</a></li>
+	<li><a href="/play/television" class="pop">TV</a></li>
+	<li><a href="/play/movies" class="pop">Movies</a></li>
+	<li><a href="/play/animals" class="pop">Animals</a></li>
+	<li><a href="/play/funny">Funny Words</a></li>
+</ul>
+<p>Vocabulary:</p>
+<ul>
+	<li><a href="/play/kids-easy">Ages 5-7</a></li>
+	<li><a href="/play/kids">Ages 8-9</a></li>
+	<li><a href="/play/kids-advanced">Ages 10-12</a></li>
+	<li><a href="/play/sat-prep">SAT Words</a></li>
+	<li><a href="/play/gre-prep">GRE Words</a></li>
+</ul>
+<p>School Subjects:</p>
+<ul>
+			<li><a href="/play/chemistry">Chemistry</a></li>
+					<li><a href="/play/geography">Geography</a></li>
+		<li><a href="/play/math">Math</a></li>
+	<li><a href="/play/science">Science</a></li>
+		<li><a href="/play/spanish">Spanish</a></li>
+	</ul>
+<p>Holidays &amp; Seasons:</p>
+<ul>
+	<li><a href="/play/christmas">Christmas</a></li>
+	<li><a href="/play/easter">Easter</a></li>
+	<li><a href="/play/fall">Fall</a></li>
+			<li><a href="/play/thanksgiving">Thanksgiving</a></li>
+		<li><a href="/play/halloween">Halloween</a></li>
+</ul>
+</nav></div>
+
+<div class="noosecanvas">
+	<div class="word-hint">Hint?</div>
+	<svg version="1.1" class="noose" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 236 333" style="enable-background:new 0 0 236 333;" xml:space="preserve">
+	<g>
+		<line class="inactive step" x1="139.4" y1="133.9" x2="121.6" y2="212.4"/>
+		<line class="inactive step" x1="139.4" y1="134.3" x2="154.2" y2="210.8"/>
+		<line class="inactive step" x1="139.4" y1="218.7" x2="114.2" y2="299.3"/>
+		<line class="inactive step" x1="139.4" y1="218.7" x2="167.5" y2="291.4"/>
+		<line class="inactive step" x1="139.4" y1="124.7" x2="139.4" y2="218.7"/>
+		<circle class="inactive step" cx="139.4" cy="89.1" r="35.6"/>
+		<g class="inactive lose">
+			<g>
+				<line x1="122.9" y1="83.4" x2="131.1" y2="91.6"/>
+				<line x1="122.6" y1="91.9" x2="131.6" y2="82.9"/>
+			</g>
+			<g>
+				<line x1="147" y1="83.5" x2="155.3" y2="91.8"/>
+				<line x1="146.8" y1="92" x2="155.8" y2="83"/>
+			</g>
+			<g>
+				<path d="M126.4,106.5c0-1.8,5.6-3.2,12.4-3.2"/>
+				<path d="M150.9,106.5c0-1.8-5.6-3.2-12.4-3.2"/>
+			</g>
+		</g>
+	</g>
+	<g class="inactive win">
+		<circle cx="167" cy="119.9" r="35.6"/>
+		<line x1="167" y1="169" x2="231.8" y2="96.7"/>
+		<line x1="167" y1="155.5" x2="167" y2="249.4"/>
+		<line x1="167" y1="249.4" x2="180.4" y2="330.5"/>
+		<line x1="167" y1="249.4" x2="142.4" y2="330.5"/>
+		<line x1="167" y1="169" x2="92.8" y2="106.4"/>
+		<g>
+			<path d="M151.8,133.7c0,4.2,6.9,7.7,15.4,7.7"/>
+			<path d="M182.2,133.7c0,4.2-6.9,7.7-15.4,7.7"/>
+		</g>
+		<line x1="151" y1="118.1" x2="161.1" y2="118.1"/>
+		<line x1="173.1" y1="118.1" x2="183.2" y2="118.1"/>
+	</g>
+	<g>
+		<line x1="0" y1="330.5" x2="236" y2="330.5"/>
+		<line x1="59" y1="0" x2="59" y2="330.5"/>
+		<line x1="139.4" y1="53.5" x2="139.4" y2="0"/>
+		<line x1="58" y1="2.5" x2="139.4" y2="2.5"/>
+	</g>
+</svg>	<div class="new-word">New Word</div>
+</div>
+
+<div id="word"></div>
+
+<ul id="alpha_btns"></ul>
+
+<div class="dollar--B">
+	<div>
+		<!-- HangmanWords.com - Ad Unit B -->
+		<ins class="adsbygoogle"
+		     style="display:block"
+		     data-ad-client="ca-pub-5711305288167877"
+		     data-ad-slot="8190299664"
+		     data-ad-format="auto"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+</div>
+
+<div class="copy">
+	<h2>Play Hangman Games (online, free, no downloads)</h2>
+	<p>These aren't ALL words used on the site. These are some of the best words&mdash;many many words from the English dictionary.</p></div>
+
+<div class="copy">
+	<form method="get" action="?">
+		<h3>Suggest a word:</h3>
+		<p>The words used are user contributed. Please suggest some words or phrases to add:</p>
+		<div class="contrib-row">
+			<input type="text" name="words" id="i_contribute" aria-label="Comma separated list of words" placeholder="word, short phrase, word">
+			<input type="submit">
+		</div>
+		<input type="hidden" name="game" value="Play Hangman">
+	</form>
+</div>
+
+<script>
+var game_category = "all";
+var words = ["aback","abaft","abandoned","abashed","aberrant","abhorrent","abiding","abject","ablaze","abnormal","aboard","abortive","abounding","abrasive","abrupt","absent","absorbed","absorbing","absurd","abundant","abusive","accept","account","accurate","achiever","acidic","acoustic","acoustics","acrid","action","activity","actor","actually","adamant","adaptable","addicted","adhesive","adjoining","admire","admit","advice","advice","afford","afraid","aftermath","afternoon","agonizing","agree","agreeable","agreement","ahead","airplane","airport","alarm","alcoholic","alert","alike","alive","alleged","allow","alluring","aloof","amazing","ambiguous","ambitious","amount","amuck","amuse","amused","amusement","amusing","analyze","ancient","anger","angle","angry","animal","animated","announce","annoy","annoyed","annoying","answer","anxious","apathetic","apologize","apparatus","apparel","appear","applaud","appliance","approval","approve","aquatic","argue","argument","aromatic","arrange","arrest","arrive","arrogant","ashamed","aspiring","assorted","attach","attack","attempt","attend","attract","authority","automatic","available","average","avoid","awake","aware","awesome","awful","axiomatic","babies","badge","balance","barbarous","baseball","bashful","basin","basket","bathe","battle","bawdy","beautiful","bedroom","befitting","beginner","behave","behavior","belief","believe","bells","belong","berry","berserk","better","bikes","billowy","birds","birth","birthday","bitter","bizarre","black","blade","bleach","bless","blind","blink","blood","bloody","blush","blushing","board","boast","boiling","books","boorish","border","bored","boring","borrow","bottle","bounce","bouncy","boundary","boundless","brainy","brake","branch","brash","brass","brave","brawny","breakable","breath","breathe","breezy","brick","bridge","brief","bright","broad","broken","brother","brown","bruise","brush","bubble","bucket","building","bumpy","burly","burst","bushes","business","bustling","butter","button","cabbage","cable","cactus","cagey","cakes","calculate","calendar","callous","camera","cannon","canvas","capable","caption","careful","careless","caring","carpenter","carriage","carry","carve","cattle","cause","cautious","ceaseless","celery","cellar","cemetery","certain","chalk","challenge","chance","change","channel","charge","charming","chase","cheap","cheat","check","cheer","cheerful","cheese","chemical","cherries","cherry","chess","chicken","chickens","chief","childlike","children","chilly","choke","chubby","chunky","church","circle","claim","clammy","class","classy","clean","clear","clever","close","closed","cloth","cloudy","clover","clumsy","cluttered","coach","coast","cobweb","coherent","collar","collect","color","colorful","colossal","color","combative","commanded","committee","common","company","compare","compete","complain","complete","complete","complex","concern","concerned","condemned","condition","confess","confuse","confused","connect","conscious","consider","consist","contain","continue","control","cooing","cooled","copper","correct","cough","count","country","cover","cowardly","crabby","crack","cracker","crash","crate","craven","crawl","crayon","crazy","cream","creator","creature","credit","creepy","crime","crook","crooked","cross","crowd","crowded","crown","cruel","crush","cuddly","cultured","curious","curly","current","curtain","curve","curved","curvy","cushion","cycle","cynical","daffy","daily","damage","damaged","damaging","dance","dangerous","dapper","dashing","daughter","dazzling","deadpan","deafening","death","debonair","decay","deceive","decide","decision","decisive","decorate","decorous","deeply","defeated","defective","defiant","degree","delay","delicate","delicious","delight","delirious","deliver","demonic","depend","dependent","depressed","deranged","describe","desert","deserted","deserve","design","desire","desk","destroy","detailed","detail","detect","develop","devilish","didactic","different","difficult","digestion","diligent","dinner","dinosaurs","direction","direful","disagree","disappear","disarm","discover","discovery","discreet","disgusted","dislike","distance","distinct","disturbed","divergent","divide","division","dizzy","doctor","dolls","donkey","double","doubt","doubtful","downtown","draconian","drain","dramatic","drawer","dream","dreary","dress","drink","driving","drown","drunk","ducks","dusty","dynamic","eager","early","earth","earthy","eatable","economic","educate","educated","education","effect","efficient","eggnog","eight","elastic","elated","elbow","elderly","electric","elegant","elfin","elite","embarrass","eminent","employ","empty","enchanted","encourage","endurable","energetic","engine","enjoy","enormous","enter","entertain","envious","equable","equal","erect","erratic","error","escape","ethereal","evasive","event","examine","example","excellent","exchange","excite","excited","exciting","exclusive","excuse","exercise","exist","existence","exotic","expand","expansion","expect","expensive","expert","explain","explode","extend","exuberant","exultant","fabulous","faded","faint","fairies","faithful","false","familiar","famous","fanatical","fancy","fantastic","fasten","faulty","fearful","fearless","feeble","feeling","feigned","female","fence","fertile","festive","fetch","field","fierce","filthy","finger","finicky","fireman","first","fixed","flagrant","flaky","flame","flash","flashy","flavor","flawless","flesh","flight","flimsy","flippant","float","flock","flood","floor","flower","flowers","flowery","fluffy","foamy","follow","foolish","force","foregoing","forgetful","fortunate","found","fragile","frail","frame","frantic","freezing","frequent","fresh","fretful","friction","friend","friendly","friends","frighten","frogs","front","fruit","fumbling","funny","furniture","furry","furtive","future","fuzzy","gabby","gainful","gaping","garrulous","gather","gaudy","geese","general","gentle","ghost","giant","giants","giddy","gifted","gigantic","giraffe","girls","glamorous","glass","gleaming","glorious","glossy","glove","godly","goofy","gorgeous","governor","graceful","grade","grandiose","grape","grass","grate","grateful","gratis","grease","greasy","great","greedy","green","greet","grieving","groan","groovy","grotesque","grouchy","ground","group","growth","grubby","gruesome","grumpy","guarantee","guard","guarded","guess","guide","guiltless","guitar","gullible","gusty","guttural","habitual","haircut","hallowed","halting","hammer","handle","hands","handsome","handy","hanging","hapless","happen","happy","harass","harbor","harmony","harsh","hateful","haunt","heady","health","healthy","heavenly","heavy","hellish","helpful","helpless","hesitant","hideous","high","hilarious","hissing","history","hobbies","holiday","holistic","hollow","homeless","homely","honey","honorable","horrible","horse","horses","hospital","house","houses","hover","hulking","humdrum","humor","humorous","hungry","hurried","hurry","hushed","husky","hydrant","hypnotic","icicle","identify","idiotic","ignorant","ignore","illegals","imaginary","imagine","immense","imminent","impartial","imperfect","impolite","important","imported","impress","improve","impulse","include","income","increase","industry","infamous","influence","inform","inject","injure","innate","innocent","insect","insidious","instruct","insurance","intend","interest","interfere","internal","interrupt","introduce","invent","invention","invite","irate","irritate","island","itchy","jaded","jagged","jazzy","jealous","jeans","jelly","jellyfish","jewel","jittery","jobless","jolly","joyous","judge","judicious","juggle","juice","juicy","jumbled","jumpy","juvenile","kaput","kettle","kind","kindly","kittens","kitty","kneel","knife","knock","knotty","knowing","knowledge","known","label","labored","laborer","lacking","ladybug","language","languid","large","laugh","laughable","launch","lavish","learn","learned","leather","legal","lethal","letter","letters","lettuce","level","library","license","light","lighten","likeable","limit","limping","linen","liquid","listen","literate","little","lively","living","locket","lonely","longing","loose","lopsided","loutish","lovely","loving","lowly","lucky","ludicrous","lumber","lumpy","lunch","lunchroom","luxuriant","lying","lyrical","macabre","machine","macho","maddening","madly","magenta","magic","magical","mailbox","majestic","makeshift","malicious","mammoth","manage","maniacal","marble","march","marked","market","married","marry","marvelous","massive","match","material","matter","mature","measly","measure","meaty","meddle","medical","meeting","mellow","melodic","melted","memorize","memory","merciful","messy","metal","middle","mighty","military","milky","mindless","miniature","minister","minor","minute","miscreant","misty","mitten","mixed","moaning","modern","moldy","momentous","money","monkey","month","morning","mother","motion","mountain","mourn","mouth","muddle","muddled","multiply","mundane","murder","murky","muscle","mushy","naive","nappy","narrow","nasty","nation","natural","naughty","nebulous","necessary","needle","needless","needy","nerve","nervous","nifty","night","nimble","nippy","noise","noiseless","noisy","nonstop","normal","north","nostalgic","notebook","notice","noxious","number","numerous","nutty","oafish","oatmeal","obedient","obeisant","obese","object","obnoxious","obscene","observant","observe","obsolete","obtain","occur","ocean","oceanic","offbeat","offend","offer","office","onerous","opposite","optimal","orange","oranges","order","ordinary","organic","ossified","outgoing","overflow","overjoyed","overrated","overt","paddle","painful","paint","paltry","pancake","panicky","panoramic","paper","parallel","parcel","parched","partner","party","passenger","paste","pastoral","pathetic","pause","payment","peace","peaceful","pedal","pencil","penitent","perfect","perform","period","permit","perpetual","person","petite","phobic","phone","physical","picayune","pickle","picture","pinch","piquant","pizzas","place","placid","plain","plane","planes","plant","plants","plastic","plate","plausible","pleasant","please","pleasure","plough","plucky","pocket","point","pointless","poised","poison","polish","polite","political","pollution","popcorn","porter","position","possess","possible","potato","powder","power","powerful","practice","preach","proceed","precious","prefer","premium","prepare","present","preserve","press","pretend","pretty","prevent","previous","price","pricey","prick","prickly","print","private","probable","produce","profit","profuse","program","promise","property","prose","protect","protest","proud","provide","psychotic","public","puffy","pumped","punch","puncture","punish","purple","purpose","purring","pushy","puzzled","puzzling","quarter","quartz","queen","question","queue","quick","quickest","quicksand","quiet","quill","quilt","quince","quirky","quiver","quixotic","quizzical","rabbit","rabbits","rabid","racial","radiate","ragged","railway","rainstorm","rainy","raise","rampant","range","rapid","raspy","ratty","reach","reaction","reading","ready","realize","reason","rebel","receipt","receive","receptive","recess","recognize","recondite","record","reduce","redundant","reflect","refuse","regret","regular","reign","reject","rejoice","relation","relax","release","relieved","religion","remain","remember","remind","remove","repair","repeat","replace","reply","report","reproduce","repulsive","request","rescue","resolute","resonant","respect","retire","return","reward","rhyme","rhythm","riddle","rifle","right","righteous","rightful","rigid","rings","rinse","ritzy","river","roasted","robin","robust","romantic","roomy","rotten","rough","round","route","royal","ruddy","rural","rustic","ruthless","sable","salty","sassy","satisfy","savory","scale","scarce","scare","scarecrow","scared","scarf","scary","scatter","scattering","scene","scent","school","science","scissors","scold","scorch","scrape","scratch","scrawny","scream","screw","scribble","scrub","search","seashore","second","secret","secretary","secretive","sedate","seemly","selection","selective","selfish","sense","separate","serious","servant","serve","settle","shade","shaggy","shake","shaky","shallow","shame","shape","share","sharp","shave","sheep","sheet","shelf","shelter","shiny","shirt","shiver","shivering","shock","shocking","shoes","short","shrill","shrug","sidewalk","signal","silent","silky","silly","silver","simple","sincere","sister","sisters","skate","skillful","skinny","skirt","slave","sleep","sleepy","sleet","slimy","slippery","slope","sloppy","small","smart","smash","smell","smelly","smile","smiling","smoggy","smoke","smooth","snail","snails","snake","snakes","snatch","sneaky","sneeze","sniff","snobbish","snore","snotty","society","soggy","solid","songs","soothe","sordid","sound","space","spade","spare","spark","sparkle","sparkling","special","spell","spicy","spiders","spiffy","spiky","spill","spiritual","spiteful","splendid","spoil","sponge","spooky","spoon","spotless","spotted","spotty","spray","spring","sprout","spurious","squalid","square","squash","squeak","squeal","squealing","squeamish","squeeze","squirrel","stage","stain","staking","stale","stamp","standing","stare","start","statement","station","steadfast","steady","steam","steel","steep","steer","stick","sticks","sticky","stiff","stingy","stitch","stocking","stomach","stone","store","stormy","story","stove","straight","strange","stranger","strap","straw","stream","street","stretch","string","strip","striped","stroke","strong","structure","stuff","stupid","sturdy","subdued","substance","subtract","succeed","succinct","sudden","suffer","sugar","suggest","sulky","summer","super","superb","supply","support","suppose","supreme","surprise","surround","suspect","suspend","swanky","sweater","sweet","swift","swing","switch","system","table","taboo","tacit","tacky","talented","tangible","tangy","taste","tasteful","tasteless","tasty","tawdry","teaching","tearful","tease","tedious","teeny","teeth","telephone","telling","temper","temporary","tempt","tendency","tender","tense","tenuous","terrible","terrific","terrify","territory","tested","testy","texture","thank","thankful","theory","thick","thing","things","thinkable","third","thirsty","thirsty","thought","thread","three","thrill","throat","throne","thumb","thunder","ticket","tickle","tiger","tight","tired","tiresome","title","tomatoes","tongue","tooth","toothsome","torpid","touch","tough","towering","trace","trade","trail","train","trains","tramp","tranquil","transport","trashy","travel","treat","treatment","trees","tremble","trick","tricky","trite","trouble","troubled","trousers","truck","trucks","truculent","trust","truthful","tumble","turkey","twist","typical","ugliest","ultra","umbrella","unable","unadvised","unarmed","unbiased","uncle","uncovered","underwear","undress","unequal","unequaled","uneven","unfasten","unhealthy","unique","unite","unkempt","unknown","unlock","unnatural","unpack","unruly","unsightly","untidy","unused","unusual","unwieldy","unwritten","upbeat","uppity","upset","uptight","useful","useless","utopian","utter","uttermost","vacation","vacuous","vagabond","vague","valuable","value","vanish","various","vegetable","vengeful","venomous","verdant","verse","versed","vessel","vigorous","violent","violet","visit","visitor","vivacious","voice","voiceless","volatile","volcano","voracious","voyage","vulgar","wacky","waggish","waiting","wakeful","wander","wandering","wanting","warlike","waste","wasteful","watch","water","watery","waves","wealth","wealthy","weary","weather","weigh","weight","welcome","wheel","whimsical","whine","whirl","whisper","whistle","white","whole","wholesale","wicked","wiggly","willing","window","windy","winter","wistful","witty","wobble","woebegone","woman","womanly","women","wonder","wonderful","wooden","woozy","workable","worried","worry","worthless","wound","wrathful","wreck","wrench","wrestle","wretched","wriggle","wrist","writer","writing","wrong","yellow","yielding","young","youthful","yummy","zealous","zebra","zephyr","zesty","zipper","zippy","zonked"];
+</script>
+
+				</div>
+				<div class="layout-prefooter">
+					<ins class="adsbygoogle adsbygoogle--prefooter" 
+						style="display:inline-block"
+						data-ad-client="ca-pub-5711305288167877"
+						data-ad-slot="8416336468"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+				<footer>
+					<nav>
+						<a href="/play">Play Hangman</a>
+						<a href="/how-to">How to Play Hangman</a>
+						<a href="/create">Make your own Hangman Game</a>
+					</nav>
+				</footer>
+			</div>
+			<div class="layout-side">
+								<ins class="adsbygoogle adsbygoogle--side1" 
+					style="display:inline-block"
+					data-ad-client="ca-pub-5711305288167877"
+					data-ad-slot="8416336468"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+								<ins class="adsbygoogle adsbygoogle--side2" 
+					style="display:inline-block"
+					data-ad-client="ca-pub-5711305288167877"
+					data-ad-slot="8416336468"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+							</div>
+		</div>
+
+				
+		<noscript>
+			<div class="js_notice">You need to enable JavaScript. See: <a href="https://www.enable-javascript.com/" target="_blank">How to enable JavaScript in your browser</a></div>
+		</noscript>
+	</body>
+</html>
