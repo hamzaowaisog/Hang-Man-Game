@@ -9,7 +9,7 @@ from hangman_guessing import guess_list
 guessing_word = random.choice(guess_list).lower()
 word_letter = len(guessing_word)
 game_over = False
-tries = 6
+tries = word_letter
 from hangman_life import game_name
 print(game_name)
 
